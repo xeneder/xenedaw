@@ -42,6 +42,8 @@ This is the easiest method with automatic deployments on every push.
 
 ### Method 2: CLI Deployment (Manual)
 
+**Note:** Wrangler requires Node.js 20+ on your local machine.
+
 1. **Install Wrangler** (if not already):
    ```bash
    npm install -g wrangler
@@ -62,10 +64,7 @@ This is the easiest method with automatic deployments on every push.
    wrangler pages deploy dist --project-name=xenedaw
    ```
 
-   Or use the npm script:
-   ```bash
-   npm run deploy
-   ```
+**Recommended:** Use Method 1 (GitHub Integration) instead to avoid local Node version issues.
 
 ### Method 3: Direct Upload
 
@@ -86,7 +85,7 @@ This is the easiest method with automatic deployments on every push.
 # Automatic via GitHub
 Build command: npm run build
 Build output directory: dist
-Node version: 18
+Node version: 20.18.1 or newer
 
 # Branch deployments
 Production branch: main
