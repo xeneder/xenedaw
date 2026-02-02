@@ -1,5 +1,6 @@
 import { Volume2, Trash2, Copy } from 'lucide-react';
 import { useTrackStore, useUIStore } from '@/store';
+import { PatternTimeline } from './PatternTimeline';
 import type { Track } from '@/types';
 
 interface TrackComponentProps {
@@ -155,14 +156,8 @@ export function TrackComponent({ track }: TrackComponentProps) {
         </div>
       </div>
 
-      {/* Pattern Timeline (placeholder) */}
-      <div className="mt-3 h-12 bg-bg rounded border border-border flex items-center px-2">
-        <span className="text-xs text-text-muted">
-          {track.patterns.length === 0
-            ? 'No patterns yet. Double-click to add.'
-            : `${track.patterns.length} pattern(s)`}
-        </span>
-      </div>
+      {/* Pattern Timeline */}
+      <PatternTimeline track={track} />
     </div>
   );
 }
