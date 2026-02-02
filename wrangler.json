@@ -1,0 +1,6 @@
+{
+  "name": "xenedaw",
+  "compatibility_date": "2026-02-02",
+  "pages": true,
+  "pages_build_output_dir": "dist"
+}
