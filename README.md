@@ -2,6 +2,8 @@
 
 Lightweight web DAW (Digital Audio Workstation) for game music creation, built with React, TypeScript, and Tone.js.
 
+🌐 **Live Demo**: [daw.xene.dev](https://daw.xene.dev) (will be available after deployment)
+
 ## Features (Phase 1 - MVP)
 
 - ✅ **Project Management**: Create, save, and load projects
@@ -105,6 +107,30 @@ src/
 - [ ] MP3/OGG export
 - [ ] Localization
 - [ ] Electron desktop app
+
+## Deployment
+
+XeneDAW is deployed on **Cloudflare Pages** for fast, global edge delivery.
+
+### Quick Deploy
+
+1. **GitHub Integration** (Automatic):
+   - Fork/clone this repository
+   - Connect to Cloudflare Pages
+   - Automatic deployments on every push
+
+2. **Manual Deploy**:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+## Documentation
+
+- [SETUP.md](./SETUP.md) - Current project status and architecture
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment guide for Cloudflare Pages
 
 ## License
 

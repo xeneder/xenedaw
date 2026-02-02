@@ -1,0 +1,41 @@
+# Security and Performance Headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+
+# Enable SharedArrayBuffer and AudioWorklet for Web Audio API
+/*
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+
+# Cache static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Audio files
+*.wav
+  Content-Type: audio/wav
+  Cache-Control: public, max-age=31536000
+
+*.mp3
+  Content-Type: audio/mpeg
+  Cache-Control: public, max-age=31536000
+
+*.ogg
+  Content-Type: audio/ogg
+  Cache-Control: public, max-age=31536000
+
+# Fonts
+*.woff
+  Content-Type: font/woff
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff2
+  Content-Type: font/woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Service Worker
+/sw.js
+  Cache-Control: no-cache
