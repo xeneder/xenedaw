@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useUIStore } from '@/store';
+import { useAudioEngine } from '@/hooks/useAudioEngine';
 import { MenuBar } from '@/components/UI/MenuBar';
 import { Transport } from '@/components/Transport/Transport';
 import { Timeline } from '@/components/Timeline/Timeline';
@@ -7,6 +8,9 @@ import { PianoRoll } from '@/components/PianoRoll/PianoRoll';
 
 function App() {
   const { theme, setTheme } = useUIStore();
+
+  // Initialize audio engine
+  useAudioEngine();
 
   // Initialize theme from localStorage
   useEffect(() => {
